@@ -36,7 +36,7 @@ export class GameOverScreen extends BaseScreen {
 
         // Title
         const title = document.createElement('h1');
-        title.textContent = '💀 GAME OVER';
+        title.textContent = '💀 游戏结束';
         title.style.color = '#ff4444';
         screen.appendChild(title);
 
@@ -49,9 +49,9 @@ export class GameOverScreen extends BaseScreen {
         const timeStr = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
 
         stats.innerHTML = `
-            <p style="font-size: 1.5em; margin: 15px 0;">⏱️ Time Survived: <strong>${timeStr}</strong></p>
-            <p style="font-size: 1.5em; margin: 15px 0;">💀 Enemies Killed: <strong>${this.killCount}</strong></p>
-            <p style="font-size: 1.5em; margin: 15px 0;">📊 Level Reached: <strong>${this.level}</strong></p>
+            <p style="font-size: 1.5em; margin: 15px 0;">⏱️ 存活时间: <strong>${timeStr}</strong></p>
+            <p style="font-size: 1.5em; margin: 15px 0;">💀 击杀数: <strong>${this.killCount}</strong></p>
+            <p style="font-size: 1.5em; margin: 15px 0;">📊 达到等级: <strong>${this.level}</strong></p>
         `;
         screen.appendChild(stats);
 
@@ -59,12 +59,12 @@ export class GameOverScreen extends BaseScreen {
         const buttonContainer = document.createElement('div');
         buttonContainer.style.cssText = 'display: flex; gap: 20px; margin-top: 30px;';
 
-        const retryBtn = this.createButton('🔄 Play Again', () => {
+        const retryBtn = this.createButton('🔄 再来一局', () => {
             screenManager.goto('class_selection');
         });
         buttonContainer.appendChild(retryBtn);
 
-        const menuBtn = this.createButton('🏠 Main Menu', () => {
+        const menuBtn = this.createButton('🏠 主菜单', () => {
             screenManager.goto('main_menu');
         });
         buttonContainer.appendChild(menuBtn);

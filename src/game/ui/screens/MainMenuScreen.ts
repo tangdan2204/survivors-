@@ -26,13 +26,13 @@ export class MainMenuScreen extends BaseScreen {
 
         // Title
         const title = document.createElement('h1');
-        title.textContent = 'COSMOS SURVIVORS';
+        title.textContent = '宇宙幸存者';
         screen.appendChild(title);
 
         // Subtitle
         const subtitle = document.createElement('p');
         subtitle.style.cssText = 'color: #888; margin-bottom: 40px; font-size: 1.2em;';
-        subtitle.textContent = '🚀 Survive the Cosmic Chaos 🌌';
+        subtitle.textContent = '🚀 在宇宙混沌中生存 🌌';
         screen.appendChild(subtitle);
 
         // Button container
@@ -40,20 +40,20 @@ export class MainMenuScreen extends BaseScreen {
         buttonContainer.style.cssText = 'display: flex; flex-direction: column; gap: 20px;';
 
         // Start button
-        const startBtn = this.createButton('🎮 START', () => {
+        const startBtn = this.createButton('🎮 开始游戏', () => {
             screenManager.goto('class_selection');
         });
         startBtn.style.fontSize = '1.5em';
         buttonContainer.appendChild(startBtn);
 
         // Options button
-        const optionsBtn = this.createButton('⚙️ OPTIONS', () => {
+        const optionsBtn = this.createButton('⚙️ 设置', () => {
             screenManager.goto('options');
         });
         buttonContainer.appendChild(optionsBtn);
 
         // Particle Debug button (dev)
-        const debugBtn = this.createButton('🔬 Particle Debug', () => {
+        const debugBtn = this.createButton('🔬 粒子调试', () => {
             screenManager.goto('particle_debug');
         });
         debugBtn.style.fontSize = '0.9em';

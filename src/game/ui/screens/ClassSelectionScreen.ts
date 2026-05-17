@@ -26,7 +26,7 @@ export class ClassSelectionScreen extends BaseScreen {
 
         // Title
         const title = document.createElement('h1');
-        title.textContent = 'COSMOS SURVIVORS';
+        title.textContent = '宇宙幸存者';
         screen.appendChild(title);
 
         // Dev Mode Checkbox
@@ -53,7 +53,7 @@ export class ClassSelectionScreen extends BaseScreen {
         const label = document.createElement('label');
         label.htmlFor = 'dev-mode-checkbox';
         label.className = 'dev-mode-label';
-        label.textContent = '🛠️ Developer Mode (Weapons Only, 6 Options)';
+        label.textContent = '🛠️ 开发者模式 (仅武器, 6个选项)';
 
         const toggle = () => {
             this.devMode = !this.devMode;

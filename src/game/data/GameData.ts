@@ -6,209 +6,206 @@ import {
 } from '../weapons/implementations';
 
 export const CLASSES = [
-    { name: "Void Walker", emoji: "🌑", bonus: "Speed +10%", weaponId: 'void_ray', hp: 90, stats: { moveSpeed: 1.1 } },
-    { name: "Cyber Samurai", emoji: "🤖", bonus: "Crit +10%", weaponId: 'phantom_slash', hp: 85, stats: { critChance: 0.15 } },
-    { name: "Heavy Gunner", emoji: "🦍", bonus: "Might +20%, Speed -10%", weaponId: 'plasma_cannon', hp: 110, stats: { might: 1.2, moveSpeed: 0.9 } },
-    { name: "Technomancer", emoji: "🧙‍♂️", bonus: "Duration +20%", weaponId: 'nanobot_swarm', hp: 100, stats: { duration: 1.2 } },
-    { name: "Astro Biologist", emoji: "👨‍🔬", bonus: "Regen +1", weaponId: 'spore_cloud', hp: 95, stats: { regen: 1 } },
-    { name: "Quantum Physicist", emoji: "⚛️", bonus: "Cooldown -10%", weaponId: 'singularity_orb', hp: 80, stats: { cooldown: 0.9 } },
-    { name: "Exo Marine", emoji: "👮", bonus: "Armor +2", weaponId: 'orbital_strike', hp: 130, stats: { armor: 2 } },
-    { name: "Psionicist", emoji: "🧠", bonus: "Area +20%", weaponId: 'mind_blast', hp: 75, stats: { area: 1.2 } },
-    { name: "Time Keeper", emoji: "⏳", bonus: "Proj Speed +20%", weaponId: 'chrono_disc', hp: 100, stats: { speed: 1.2 } },
-    { name: "Alien Symbiote", emoji: "👽", bonus: "Growth +20%", weaponId: 'acid_pool', hp: 95, stats: { growth: 1.2 } },
-    { name: "Storm Mage", emoji: "⚡", bonus: "Might +15%", weaponId: 'lightning_chain', hp: 70, stats: { might: 1.15 } },
-    { name: "Berserker", emoji: "🔥", bonus: "HP +50%, Armor -2, Might +10%", weaponId: 'spinning_ember', hp: 150, stats: { armor: -2, might: 1.1 } },
-    { name: "Ice Mage", emoji: "🧊", bonus: "Area +15%, Cooldown -10%", weaponId: 'frost_nova', hp: 85, stats: { area: 1.15, cooldown: 0.9 } },
-    { name: "Demolitions Expert", emoji: "💣", bonus: "Area +20%, Might +10%", weaponId: 'plasma_grenade', hp: 100, stats: { area: 1.2, might: 1.1 } },
+    { name: "虚空行者", emoji: "🌑", bonus: "速度 +10%", weaponId: 'void_ray', hp: 90, stats: { moveSpeed: 1.1 } },
+    { name: "赛博武士", emoji: "🤖", bonus: "暴击 +10%", weaponId: 'phantom_slash', hp: 85, stats: { critChance: 0.15 } },
+    { name: "重型炮手", emoji: "🦍", bonus: "威力 +20%, 速度 -10%", weaponId: 'plasma_cannon', hp: 110, stats: { might: 1.2, moveSpeed: 0.9 } },
+    { name: "科技法师", emoji: "🧙‍♂️", bonus: "持续 +20%", weaponId: 'nanobot_swarm', hp: 100, stats: { duration: 1.2 } },
+    { name: "星际生物学家", emoji: "👨‍🔬", bonus: "回复 +1", weaponId: 'spore_cloud', hp: 95, stats: { regen: 1 } },
+    { name: "量子物理学家", emoji: "⚛️", bonus: "冷却 -10%", weaponId: 'singularity_orb', hp: 80, stats: { cooldown: 0.9 } },
+    { name: "外骨骼陆战队", emoji: "👮", bonus: "护甲 +2", weaponId: 'orbital_strike', hp: 130, stats: { armor: 2 } },
+    { name: "灵能者", emoji: "🧠", bonus: "范围 +20%", weaponId: 'mind_blast', hp: 75, stats: { area: 1.2 } },
+    { name: "时间守望者", emoji: "⏳", bonus: "弹速 +20%", weaponId: 'chrono_disc', hp: 100, stats: { speed: 1.2 } },
+    { name: "异星共生体", emoji: "👽", bonus: "成长 +20%", weaponId: 'acid_pool', hp: 95, stats: { growth: 1.2 } },
+    { name: "风暴法师", emoji: "⚡", bonus: "威力 +15%", weaponId: 'lightning_chain', hp: 70, stats: { might: 1.15 } },
+    { name: "狂战士", emoji: "🔥", bonus: "生命 +50%, 护甲 -2, 威力 +10%", weaponId: 'spinning_ember', hp: 150, stats: { armor: -2, might: 1.1 } },
+    { name: "冰霜法师", emoji: "🧊", bonus: "范围 +15%, 冷却 -10%", weaponId: 'frost_nova', hp: 85, stats: { area: 1.15, cooldown: 0.9 } },
+    { name: "爆破专家", emoji: "💣", bonus: "范围 +20%, 威力 +10%", weaponId: 'plasma_grenade', hp: 100, stats: { area: 1.2, might: 1.1 } },
 ];
 
 export const POWERUPS = [
-    // Basic
-    { name: "Nano-Repair", description: "Regen +0.5/s", type: "regen", value: 0.5, emoji: "❤️" },
-    { name: "Targeting HUD", description: "Crit +5%", type: "critChance", value: 0.05, emoji: "🎯" },
-    { name: "Plasma Core", description: "Might +5%", type: "might", value: 0.05, emoji: "💪" },
-    { name: "Cooling System", description: "Cooldown -5%", type: "cooldown", value: -0.05, emoji: "❄️" },
-
-    // Creative
-    { name: "Gravity Well", description: "Pull range +20%", type: "magnet", value: 20, emoji: "🧲" },
-    { name: "Chain Reaction", description: "Area +10%", type: "area", value: 0.1, emoji: "💣" },
-    { name: "Vampiric Link", description: "Growth +10%", type: "growth", value: 0.1, emoji: "🧛" },
-    { name: "Temporal Flux", description: "Duration +15%", type: "duration", value: 0.15, emoji: "⏰" },
-    { name: "Berserker Rage", description: "Crit Dmg +25%", type: "critDamage", value: 0.25, emoji: "😡" },
-    { name: "Barrier Field", description: "Max HP +10", type: "maxHp", value: 10, emoji: "🔮" },
-    { name: "Overclock", description: "Speed +10%", type: "speed", value: 0.1, emoji: "⏩" },
-    { name: "Phase Shift", description: "Move Speed +10%", type: "moveSpeed", value: 0.1, emoji: "👻" },
-    { name: "Rapid Tick", description: "Zone tick -0.1s", type: "tick", value: 0.1, emoji: "⏱️" },
-    { name: "Void Shield", description: "Armor +1", type: "armor", value: 1, emoji: "🌌" },
+    { name: "纳米修复", description: "回复 +0.5/秒", type: "regen", value: 0.5, emoji: "❤️" },
+    { name: "瞄准系统", description: "暴击 +5%", type: "critChance", value: 0.05, emoji: "🎯" },
+    { name: "等离子核心", description: "威力 +5%", type: "might", value: 0.05, emoji: "💪" },
+    { name: "冷却系统", description: "冷却 -5%", type: "cooldown", value: -0.05, emoji: "❄️" },
+    { name: "引力阱", description: "吸引范围 +20%", type: "magnet", value: 20, emoji: "🧲" },
+    { name: "连锁反应", description: "范围 +10%", type: "area", value: 0.1, emoji: "💣" },
+    { name: "吸血链接", description: "成长 +10%", type: "growth", value: 0.1, emoji: "🧛" },
+    { name: "时间波动", description: "持续 +15%", type: "duration", value: 0.15, emoji: "⏰" },
+    { name: "狂暴之怒", description: "暴伤 +25%", type: "critDamage", value: 0.25, emoji: "😡" },
+    { name: "屏障力场", description: "最大生命 +10", type: "maxHp", value: 10, emoji: "🔮" },
+    { name: "超频加速", description: "弹速 +10%", type: "speed", value: 0.1, emoji: "⏩" },
+    { name: "相位转移", description: "移速 +10%", type: "moveSpeed", value: 0.1, emoji: "👻" },
+    { name: "快速脉冲", description: "区域伤害间隔 -0.1秒", type: "tick", value: 0.1, emoji: "⏱️" },
+    { name: "虚空护盾", description: "护甲 +1", type: "armor", value: 1, emoji: "🌌" },
 ];
 
 export const WEAPONS = [
     {
         id: 'void_ray',
-        name: "Void Ray",
+        name: "虚空射线",
         emoji: "🔫",
-        description: "Fires beams at enemies",
+        description: "向敌人发射光束",
         class: VoidRayWeapon,
         evolution: {
-            name: "Void Cannon",
+            name: "虚空加农",
             emoji: "💜",
-            description: "Massive void beam with AOE explosion"
+            description: "巨型虚空光束附带范围爆炸"
         }
     },
     {
         id: 'phantom_slash',
-        name: "Phantom Slash",
+        name: "幻影斩",
         emoji: "⚔️",
-        description: "Instantly cuts random enemies",
+        description: "瞬间斩击随机敌人",
         class: PhantomSlashWeapon,
         evolution: {
-            name: "Dimensional Blade",
+            name: "次元之刃",
             emoji: "🗡️",
-            description: "Cuts through dimensions, pierces all"
+            description: "穿越次元，贯穿一切"
         }
     },
     {
         id: 'plasma_cannon',
-        name: "Plasma Cannon",
+        name: "等离子炮",
         emoji: "🔋",
-        description: "Fires massive explosive plasma rounds",
+        description: "发射大型爆炸等离子弹",
         class: PlasmaCannonWeapon,
         evolution: {
-            name: "Fusion Core",
+            name: "聚变核心",
             emoji: "⚛️",
-            description: "Plasma rounds create black holes on impact"
+            description: "等离子弹击中后产生黑洞"
         }
     },
     {
         id: 'nanobot_swarm',
-        name: "Nanobot Swarm",
+        name: "纳米蜂群",
         emoji: "🦠",
-        description: "Damaging aura around player",
+        description: "玩家周围的伤害光环",
         class: NanobotSwarmWeapon,
         evolution: {
-            name: "Nano Plague",
+            name: "纳米瘟疫",
             emoji: "☣️",
-            description: "Spreads between enemies, massive area"
+            description: "在敌人间传播，覆盖巨大范围"
         }
     },
     {
         id: 'spore_cloud',
-        name: "Spore Cloud",
+        name: "孢子云",
         emoji: "🍄",
-        description: "Leaves damaging zones",
+        description: "留下伤害区域",
         class: SporeCloudWeapon,
         evolution: {
-            name: "Fungal Apocalypse",
+            name: "菌类末日",
             emoji: "🍄‍🟫",
-            description: "Giant toxic zones that last forever"
+            description: "巨大毒区永久存在"
         }
     },
     {
         id: 'singularity_orb',
-        name: "Singularity Orb",
+        name: "奇点球",
         emoji: "⚫",
-        description: "Slow moving destruction",
+        description: "缓慢移动的毁灭之球",
         class: SingularityOrbWeapon,
         evolution: {
-            name: "Black Hole",
+            name: "黑洞",
             emoji: "🕳️",
-            description: "Sucks in and crushes all enemies"
+            description: "吸入并碾碎所有敌人"
         }
     },
     {
         id: 'orbital_strike',
-        name: "Orbital Strike",
+        name: "轨道打击",
         emoji: "🛰️",
-        description: "Calls down random explosions",
+        description: "召唤随机位置爆炸",
         class: OrbitalStrikeWeapon,
         evolution: {
-            name: "Atomic Bomb",
+            name: "原子弹",
             emoji: "☢️",
-            description: "Massive nuclear explosion with mushroom cloud"
+            description: "巨型核爆与蘑菇云"
         }
     },
     {
         id: 'mind_blast',
-        name: "Mind Blast",
+        name: "精神冲击",
         emoji: "🧠",
-        description: "Explosion at enemy location",
+        description: "在敌人位置引发爆炸",
         class: MindBlastWeapon,
         evolution: {
-            name: "Psychic Storm",
+            name: "灵能风暴",
             emoji: "🌀",
-            description: "Multiple explosions, stuns enemies"
+            description: "多重爆炸，眩晕敌人"
         }
     },
     {
         id: 'chrono_disc',
-        name: "Chrono Disc",
+        name: "时光飞碟",
         emoji: "💿",
-        description: "Boomerang disc",
+        description: "回旋飞碟",
         class: ChronoDiscWeapon,
         evolution: {
-            name: "Time Shatter",
+            name: "时间碎裂",
             emoji: "⏰",
-            description: "Disc splits into temporal echoes"
+            description: "飞碟分裂为时间回声"
         }
     },
     {
         id: 'acid_pool',
-        name: "Acid Pool",
+        name: "酸液池",
         emoji: "🧪",
-        description: "Throws acid flasks",
+        description: "投掷酸液瓶",
         class: AcidPoolWeapon,
         evolution: {
-            name: "Toxic Deluge",
+            name: "毒液洪流",
             emoji: "☢️",
-            description: "Acid puddles on impact, lingering damage"
+            description: "击中后产生酸液水洼，持续伤害"
         }
     },
     {
         id: 'lightning_chain',
-        name: "Lightning Chain",
+        name: "链式闪电",
         emoji: "⚡",
-        description: "Chains between enemies",
+        description: "在敌人间连锁弹射",
         class: LightningChainWeapon,
         evolution: {
-            name: "Thunderstorm",
+            name: "雷暴",
             emoji: "🌩️",
-            description: "Infinite chain lightning"
+            description: "无限连锁闪电"
         }
     },
     {
         id: 'spinning_ember',
-        name: "Spinning Ember",
+        name: "旋转火焰",
         emoji: "🔥",
-        description: "Fireballs that orbit you",
+        description: "环绕你的火球",
         class: SpinningEmberWeapon,
         evolution: {
-            name: "Inferno Lash",
+            name: "炼狱之鞭",
             emoji: "🌋",
-            description: "Leaves burning trails"
+            description: "留下燃烧轨迹"
         }
     },
     {
         id: 'frost_nova',
-        name: "Frost Nova",
+        name: "冰霜新星",
         emoji: "❄️",
-        description: "Freezing aura that slows enemies",
+        description: "减速敌人的冰冻光环",
         class: FrostNovaWeapon,
         evolution: {
-            name: "Absolute Zero",
+            name: "绝对零度",
             emoji: "🧊",
-            description: "Freezes enemies solid, massive damage"
+            description: "将敌人冻结为冰块，巨额伤害"
         }
     },
     {
         id: 'plasma_grenade',
-        name: "Plasma Grenade",
+        name: "等离子手雷",
         emoji: "💣",
-        description: "Throws plasma grenades that explode on impact",
+        description: "投掷等离子手雷，触碰爆炸",
         class: PlasmaGrenadeWeapon,
         evolution: {
-            name: "Supernova Blast",
+            name: "超新星爆发",
             emoji: "💥",
-            description: "Chain explosions for massive area damage"
+            description: "连锁爆炸造成巨大范围伤害"
         }
     },
 ];
@@ -228,17 +225,17 @@ export const ENEMY_CONFIG = {
 
 // Шаблоны врагов — только имя, эмоджи и модификатор скорости
 const ENEMY_TEMPLATES = [
-    { name: "Void Bat", emoji: "🦇", speedMod: 1.0 },
-    { name: "Scout Drone", emoji: "🛸", speedMod: 0.8 },
-    { name: "Xeno Spider", emoji: "🕷️", speedMod: 0.7 },
-    { name: "Alien Grunt", emoji: "👾", speedMod: 0.9 },
-    { name: "Mech Trooper", emoji: "🤖", speedMod: 0.6 },
-    { name: "Asteroid Golem", emoji: "🪨", speedMod: 0.4 },
-    { name: "Void Wraith", emoji: "🌀", speedMod: 1.1 },
-    { name: "Death Walker", emoji: "💀", speedMod: 1.2 },
-    { name: "Tentacle Horror", emoji: "🐙", speedMod: 0.5 },  // НОВЫЙ
-    { name: "Plasma Elemental", emoji: "�", speedMod: 0.9 },  // НОВЫЙ
-    { name: "Doom Harbinger", emoji: "☠️", speedMod: 1.0 },  // НОВЫЙ
+    { name: "虚空蝙蝠", emoji: "🦇", speedMod: 1.0 },
+    { name: "侦察无人机", emoji: "🛸", speedMod: 0.8 },
+    { name: "异形蜘蛛", emoji: "🕷️", speedMod: 0.7 },
+    { name: "外星步兵", emoji: "👾", speedMod: 0.9 },
+    { name: "机甲士兵", emoji: "🤖", speedMod: 0.6 },
+    { name: "陨石巨人", emoji: "🪨", speedMod: 0.4 },
+    { name: "虚空幽灵", emoji: "🌀", speedMod: 1.1 },
+    { name: "死亡行者", emoji: "💀", speedMod: 1.2 },
+    { name: "触手恐惧", emoji: "🐙", speedMod: 0.5 },
+    { name: "等离子元素", emoji: "�", speedMod: 0.9 },
+    { name: "末日先驱", emoji: "☠️", speedMod: 1.0 },
 ];
 
 // Генерация массива врагов с динамическими статами

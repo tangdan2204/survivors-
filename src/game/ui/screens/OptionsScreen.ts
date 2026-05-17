@@ -21,17 +21,17 @@ export class OptionsScreen extends BaseScreen {
 
         // Title
         const title = document.createElement('h1');
-        title.textContent = '⚙️ OPTIONS';
+        title.textContent = '⚙️ 设置';
         screen.appendChild(title);
 
         // Placeholder message
         const message = document.createElement('p');
         message.style.cssText = 'color: #888; margin: 30px 0;';
-        message.textContent = 'Settings coming soon...';
+        message.textContent = '设置功能即将推出...';
         screen.appendChild(message);
 
         // Back button
-        const backBtn = this.createButton('← Back', () => {
+        const backBtn = this.createButton('← 返回', () => {
             screenManager.goBack();
         });
         screen.appendChild(backBtn);

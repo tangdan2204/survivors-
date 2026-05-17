@@ -64,7 +64,7 @@ export class GameManager {
         screen.className = 'screen';
 
         const title = document.createElement('h1');
-        title.textContent = 'COSMOS SURVIVORS';
+        title.textContent = '宇宙幸存者';
         screen.appendChild(title);
 
         // Dev Mode Checkbox
@@ -80,7 +80,7 @@ export class GameManager {
         const label = document.createElement('label');
         label.htmlFor = 'dev-mode-checkbox';
         label.className = 'dev-mode-label';
-        label.textContent = '🛠️ Developer Mode (Weapons Only, 6 Options)';
+        label.textContent = '🛠️ 开发者模式 (仅武器, 6个选项)';
 
         // Toggle handler
         const toggle = () => {
@@ -221,7 +221,7 @@ export class GameManager {
       <div class="xp-bar-container">
         <div class="xp-bar-fill" id="xp-bar"></div>
       </div>
-      <div class="stats" style="position:absolute; bottom: 10px; left: 10px;" id="level-display">LVL 1</div>
+      <div class="stats" style="position:absolute; bottom: 10px; left: 10px;" id="level-display">等级 1</div>
     `;
         this.uiLayer.appendChild(hud);
     }
@@ -236,7 +236,7 @@ export class GameManager {
         if (xpBar) xpBar.style.width = `${(this.player.xp / this.player.nextLevelXp) * 100}%`;
 
         const levelDisplay = document.getElementById('level-display');
-        if (levelDisplay) levelDisplay.textContent = `LVL ${this.player.level}`;
+        if (levelDisplay) levelDisplay.textContent = `等级 ${this.player.level}`;
 
         const timer = document.getElementById('timer');
         if (timer) {
@@ -260,16 +260,16 @@ export class GameManager {
 
         // Developer Mode with Tabs
         if (this.devMode) {
-            screen.innerHTML = `<h2>🛠️ DEVELOPER MODE 🛠️</h2>`;
+            screen.innerHTML = `<h2>🛠️ 开发者模式 🛠️</h2>`;
 
             // Create tabs
             const tabs = document.createElement('div');
             tabs.className = 'dev-tabs interactive';
 
             const tabData = [
-                { id: 'powerups', label: '⚡ Powerups' },
-                { id: 'weapons', label: '⚔️ Weapons' },
-                { id: 'evolved', label: '🌟 Evolved' }
+                { id: 'powerups', label: '⚡ 强化' },
+                { id: 'weapons', label: '⚔️ 武器' },
+                { id: 'evolved', label: '🌟 进化' }
             ];
 
             tabData.forEach((tab, index) => {
@@ -300,7 +300,7 @@ export class GameManager {
         const isLucky = Math.random() < 0.1;
         const upgradeCount = isLucky ? 6 : 3;
 
-        screen.innerHTML = `<h2>${isLucky ? '✨ LUCKY LEVEL UP! ✨' : 'LEVEL UP!'}</h2>`;
+        screen.innerHTML = `<h2>${isLucky ? '✨ 幸运升级！ ✨' : '升级！'}</h2>`;
 
         const grid = document.createElement('div');
         grid.className = isLucky ? 'upgrade-grid-6' : 'upgrade-grid';
@@ -353,7 +353,7 @@ export class GameManager {
                 const emoji = canEvolve ? weaponData.evolution.emoji : weaponData.emoji;
                 const name = canEvolve ? weaponData.evolution.name : weaponData.name;
                 const desc = canEvolve ? weaponData.evolution.description : weaponData.description;
-                const levelText = canEvolve ? 'EVOLVE!' : (currentLevel > 0 ? `lv ${currentLevel} → ${newLevel}` : 'NEW');
+                const levelText = canEvolve ? '进化！' : (currentLevel > 0 ? `lv ${currentLevel} → ${newLevel}` : '新');
 
                 card.innerHTML = `
                 <div style="font-size: 3em">${emoji}</div>
@@ -426,7 +426,7 @@ export class GameManager {
 
                 const canEvolve = currentLevel === 5;
                 const newLevel = currentLevel + 1;
-                const levelText = canEvolve ? 'EVOLVE!' : (currentLevel > 0 ? `lv ${currentLevel} → ${newLevel}` : 'NEW');
+                const levelText = canEvolve ? '进化！' : (currentLevel > 0 ? `lv ${currentLevel} → ${newLevel}` : '新');
 
                 const emoji = canEvolve ? weaponData.evolution.emoji : weaponData.emoji;
                 const name = canEvolve ? weaponData.evolution.name : weaponData.name;
@@ -458,7 +458,7 @@ export class GameManager {
                     weaponData.evolution.emoji,
                     weaponData.evolution.name,
                     weaponData.evolution.description,
-                    '⚡ INSTANT EVOLVE',
+                    '⚡ 瞬间进化',
                     () => {
                         this.addEvolvedWeapon(weaponData.id);
                         screen.remove();
@@ -676,9 +676,9 @@ export class GameManager {
         const screen = document.createElement('div');
         screen.className = 'screen';
         screen.innerHTML = `
-        <h1>GAME OVER</h1>
-        <h2>Time: ${Math.floor(this.gameTime)}s</h2>
-        <button class="interactive" style="padding: 20px; font-size: 20px; cursor: pointer;" onclick="location.reload()">RESTART</button>
+        <h1>游戏结束</h1>
+        <h2>时间: ${Math.floor(this.gameTime)}秒</h2>
+        <button class="interactive" style="padding: 20px; font-size: 20px; cursor: pointer;" onclick="location.reload()">重新开始</button>
       `;
         this.uiLayer.appendChild(screen);
     }
